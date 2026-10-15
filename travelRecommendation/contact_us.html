@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us - TravelBloom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./travel_recommendation.css">
+    <link rel="stylesheet" href="./about_us.css">
+    <link rel="stylesheet" href="./contact_us.css">
+</head>
+<body class="about-page contact-page">
+
+    <!-- Navbar (no search bar on this page) -->
+    <nav>
+        <div class="brand">
+            <i class="fa-solid fa-plane-departure logo" aria-hidden="true"></i>
+            <h2>TravelBloom</h2>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+            <li><a href="./about_us.html" id="aboutus">About Us</a></li>
+            <li><a href="./contact_us.html" id="contact">Contact Us</a></li>
+        </ul>
+
+        <div class="nav-spacer"></div>
+    </nav>
+
+    <main class="contact">
+        <div class="social">
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <section class="contact-intro">
+            <h1>Contact Us</h1>
+            <p>Get in touch</p>
+        </section>
+
+        <form class="contact-form" action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+</body>
+</html>

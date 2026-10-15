@@ -2,20 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Travel Recommendation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./travel_recommendation.css">
 </head>
 <body>
-    <nav><h2>TravelBloom</h2>
-    <ul>
-        <li><a href=./travel_recommendation.html id="home">Home</a></li>
-        <li><a href=./travel_recommendation.html id="aboutus">About Us</a></li>
-        <li><a href=./travel_recommendation.html id="contact">Contact</a></li>
-        <div>
-            <li><input type="text" id="searchInput" placeholder="Enter a destination or keyword"></li>
-            <li><button id='btnSearch'>Search</button>
-            <li><button id='btnReset'>Clear</button>
+
+    <!-- Task 2: Navbar -->
+    <nav>
+        <div class="brand">
+            <i class="fa-solid fa-plane-departure logo" aria-hidden="true"></i>
+            <h2>TravelBloom</h2>
         </div>
-    </ul>
+
+        <ul class="nav-links">
+            <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+            <li><a href="./about_us.html" id="aboutus">About Us</a></li>
+            <li><a href="./contact_us.html" id="contact">Contact Us</a></li>
+        </ul>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+            <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+            <button id="btnSearch">Search</button>
+            <button id="btnReset">Clear</button>
+        </div>
+    </nav>
+
+    <!-- Task 3: Home page -->
+    <section class="hero" id="homeSection">
+        <div class="social">
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <div class="hero-content">
+            <h1>Explore Dream Destination</h1>
+            <p>
+                The Travel Recommendation App helps users explore popular travel destinations
+                through an interactive and user-friendly interface. It allows users to search for
+                beaches, temples, countries, or specific country names to view related cities along
+                with images and descriptions. The app dynamically fetches data from a structured
+                JSON file to display relevant results. It provides a simple and efficient way to
+                discover and plan travel destinations.
+            </p>
+            <button class="book-btn">Book Now</button>
+        </div>
+    </section>
+
 </body>
 </html>

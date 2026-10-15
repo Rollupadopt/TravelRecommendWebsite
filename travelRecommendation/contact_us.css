@@ -1,0 +1,97 @@
+
+.contact {
+    min-height: 100vh;
+    padding: 68px 60px 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact .social {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-30%);
+}
+
+.contact-intro h1 {
+    font-size: 64px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.contact-intro p {
+    font-size: 18px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ---------- Form ---------- */
+.contact-form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px;
+    font-size: 14px;
+    color: white;
+    background: rgba(16, 43, 56, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #12877a;
+    border-color: transparent;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 8px;
+    height: 42px;
+    background: #0b6b5f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #08524a;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 900px) {
+    .contact {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 150px 20px 40px 60px;
+    }
+    .contact-intro h1 {
+        font-size: 40px;
+    }
+}
