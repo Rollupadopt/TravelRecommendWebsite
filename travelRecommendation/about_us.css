@@ -1,0 +1,126 @@
+/* About Us page – builds on travel_recommendation.css (navbar, social icons) */
+
+.about-page {
+    background-color: #1d4f6b; /* fallback if the image is missing */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* translucent navbar, bold non-italic brand, as in the sample */
+.about-page nav {
+    background-color: rgba(16, 43, 56, 0.85);
+}
+
+.about-page .brand h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.about-page .nav-spacer {
+    width: 150px; /* balances the brand so links stay centred */
+}
+
+.about {
+    min-height: 100vh;
+    padding: 90px 40px 40px 100px;
+    position: relative;
+}
+
+.about .social {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ---------- Company info ---------- */
+.company h1 {
+    font-size: 64px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.company-info {
+    padding: 14px 20px;
+    margin-left: 10px;
+    background: rgba(16, 43, 56, 0.45);
+    font-size: 16px;
+    line-height: 1.6;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ---------- Team ---------- */
+.team {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.team-title {
+    flex: 0 0 160px;
+    font-size: 64px;
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.team-members {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.member {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.avatar {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.member h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.member p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.role {
+    display: inline-block;
+    background: #1b4f72;
+    border-radius: 16px;
+    padding: 6px 22px;
+    font-size: 14px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 900px) {
+    .about {
+        padding: 150px 20px 40px 60px;
+    }
+    .company h1,
+    .team-title {
+        font-size: 40px;
+    }
+    .team {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
