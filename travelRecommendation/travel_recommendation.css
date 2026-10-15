@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #14435a;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+nav ul div li{
+    background-color: white; 
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+}
+
+nav ul div li button {
+    background-color: green;
+    border-radius: 10px;
+    width: 70px;
+    height: 25px;
+    color: white;
+}
