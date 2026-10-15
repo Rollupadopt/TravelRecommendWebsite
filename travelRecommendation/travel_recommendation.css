@@ -110,7 +110,8 @@ nav {
     display: flex;
     align-items: center;
     position: relative;
-    background-color: #1d4f6b; 
+    background-color: #1d4f6b; /* fallback if the image is missing */
+    background-image: url("./images/background.jpg"); /* put your image here */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -183,5 +184,83 @@ nav {
     }
     .hero-content h1 {
         font-size: 38px;
+    }
+}
+
+/* ---------- Search results (Tasks 6 & 7) ---------- */
+.results {
+    display: none;
+    position: absolute;
+    top: 84px;
+    right: 40px;
+    width: 460px;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 5;
+}
+
+.results.visible {
+    display: flex;
+}
+
+.results-message {
+    background: rgba(255, 255, 255, 0.95);
+    color: #102b38;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.95);
+    color: #102b38;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.result-card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.result-body {
+    padding: 14px 16px 16px;
+}
+
+.result-body h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.result-body p {
+    font-size: 14px;
+    line-height: 1.45;
+    margin-bottom: 12px;
+}
+
+.result-body button {
+    background-color: #12877a;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.result-body button:hover {
+    background-color: #0e6b61;
+}
+
+@media (max-width: 900px) {
+    .results {
+        position: static;
+        width: 100%;
+        max-height: none;
+        margin-top: 20px;
     }
 }
