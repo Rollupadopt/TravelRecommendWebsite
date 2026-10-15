@@ -70,13 +70,37 @@ function findRecommendations(data, rawKeyword) {
     return results;
 }
 
-function showMessage(text) {
-    resultsBox.innerHTML = `<p class="results-message">${text}</p>`;
+const homeSection = document.getElementById("homeSection");
+
+function openResults() {
     resultsBox.classList.add("visible");
+    if (homeSection) homeSection.classList.add("showing-results");
+}
+
+function addHeading() {
+    const heading = document.createElement("h2");
+    heading.className = "results-heading";
+    heading.textContent = "Search Results";
+    resultsBox.appendChild(heading);
+}
+
+function showMessage(text) {
+    resultsBox.innerHTML = "";
+    addHeading();
+    const msg = document.createElement("p");
+    msg.className = "results-message";
+    msg.textContent = text;
+    resultsBox.appendChild(msg);
+    resultsBox.style.setProperty("--count", 1);
+    openResults();
 }
 
 function displayResults(places) {
     resultsBox.innerHTML = "";
+    addHeading();
+
+    // one column per result, so every image sits in the same row
+    resultsBox.style.setProperty("--count", places.length);
 
     places.forEach((place) => {
         const card = document.createElement("article");
@@ -86,25 +110,17 @@ function displayResults(places) {
         img.src = place.imageUrl;
         img.alt = place.name;
 
-        const body = document.createElement("div");
-        body.className = "result-body";
-
         const title = document.createElement("h3");
         title.textContent = place.name;
 
         const desc = document.createElement("p");
         desc.textContent = place.description;
 
-        const visit = document.createElement("button");
-        visit.type = "button";
-        visit.textContent = "Visit";
-
-        body.append(title, desc, visit);
-        card.append(img, body);
+        card.append(img, title, desc);
         resultsBox.appendChild(card);
     });
 
-    resultsBox.classList.add("visible");
+    openResults();
 }
 
 function handleSearch() {
@@ -130,11 +146,13 @@ function handleSearch() {
         });
 }
 
-// ---------- Reset ----------
+// ---------- Task 9: Clear button ----------
 function clearResults() {
     searchInput.value = "";
     resultsBox.innerHTML = "";
     resultsBox.classList.remove("visible");
+    if (homeSection) homeSection.classList.remove("showing-results");
+    searchInput.focus();
 }
 
 // Results appear only after the Search button is clicked
